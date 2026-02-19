@@ -59,9 +59,6 @@ namespace EmployeeManagementSystem
             }
         }
 
-        private void btnOlamba_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
