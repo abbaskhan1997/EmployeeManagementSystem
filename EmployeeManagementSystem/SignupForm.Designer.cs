@@ -34,6 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnSignup = new System.Windows.Forms.Button();
+            this.btnOlamba = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtName
@@ -92,11 +93,23 @@
             this.btnSignup.UseVisualStyleBackColor = true;
             this.btnSignup.Click += new System.EventHandler(this.btnSignup_Click);
             // 
+            // btnOlamba
+            // 
+            this.btnOlamba.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOlamba.Location = new System.Drawing.Point(534, 337);
+            this.btnOlamba.Name = "btnOlamba";
+            this.btnOlamba.Size = new System.Drawing.Size(75, 23);
+            this.btnOlamba.TabIndex = 6;
+            this.btnOlamba.Text = "olamba";
+            this.btnOlamba.UseVisualStyleBackColor = true;
+            this.btnOlamba.Click += new System.EventHandler(this.btnOlamba_Click);
+            // 
             // SignupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnOlamba);
             this.Controls.Add(this.btnSignup);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -119,5 +132,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnSignup;
+        private System.Windows.Forms.Button btnOlamba;
     }
 }

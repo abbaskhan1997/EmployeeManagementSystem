@@ -19,6 +19,11 @@ namespace EmployeeManagementSystem
             InitializeComponent();
         }
 
+        private void SignupForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnSignup_Click(object sender, EventArgs e)
         {
             if (txtName.Text == "" || txtPassword.Text == "")
@@ -54,7 +59,7 @@ namespace EmployeeManagementSystem
             }
         }
 
-        private void SignupForm_Load(object sender, EventArgs e)
+        private void btnOlamba_Click(object sender, EventArgs e)
         {
 
         }
