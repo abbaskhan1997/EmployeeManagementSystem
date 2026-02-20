@@ -12,7 +12,7 @@ namespace EmployeeManagementSystem
     public partial class ViewDataForm : Form
     {
         string conStr = "Host=localhost;Port=5432;Username=postgres;Password=password;Database=employeedb";
-        private int selectedEmpId = -1; // selected row ka empid
+        private int selectedEmpId = -1; 
         public ViewDataForm()
         {
             InitializeComponent();
@@ -25,7 +25,7 @@ namespace EmployeeManagementSystem
             dataGridViewEmployees.AutoGenerateColumns = false;
 
         }
-        // Load Employees into DataGridView
+        
         private void LoadEmployees()
         {
             try
@@ -123,7 +123,7 @@ namespace EmployeeManagementSystem
                         }
 
                         MessageBox.Show("Record deleted successfully!");
-                        LoadEmployees(); // Refresh
+                        LoadEmployees();
                     }
                     catch (Exception ex)
                     {
@@ -146,7 +146,7 @@ namespace EmployeeManagementSystem
             {
                 string searchText = txtSearch.Text.Trim();
 
-                // Agar search empty ho
+              
                 if (string.IsNullOrEmpty(searchText))
                 {
                     LoadEmployees();

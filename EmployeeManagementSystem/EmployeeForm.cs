@@ -7,15 +7,15 @@ namespace EmployeeManagementSystem
     public partial class EmployeeForm : Form
     {
         string conStr = "Host=localhost;Port=5432;Username=postgres;Password=password;Database=employeedb";
-        private int selectedEmpId = -1; // selected row ka empid
+        private int selectedEmpId = -1;
 
         public EmployeeForm()
         {
             InitializeComponent();
-            //txtID.ReadOnly = true; // ID readonly
+            
         }
 
-        // Form Load
+        
         private void EmployeeForm_Load(object sender, EventArgs e)
         {
 
@@ -81,12 +81,12 @@ namespace EmployeeManagementSystem
             }
             catch (FormatException)
             {
-                // Yeh tab chalega jab age ya salary number na ho
+                
                 MessageBox.Show("Age and Salary must contain numbers only");
             }
             catch (Exception ex)
             {
-                // Yeh general error catch karega
+               
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
@@ -127,9 +127,6 @@ namespace EmployeeManagementSystem
             set { txtRegistrationNo.Text = value; }
         }
 
-
-        // Update Button Click
-        //public int SelectedEmpId { get; set; } // property to store empid
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
