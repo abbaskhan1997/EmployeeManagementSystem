@@ -6,23 +6,19 @@ namespace EmployeeManagementSystem
 {
     public partial class EmployeeForm : Form
     {
-        string conStr = "Host=localhost;Port=5432;Username=postgres;Password=password;Database=employeedb";
+        private string conStr = "Host=localhost;Port=5432;Username=postgres;Password=password;Database=employeedb";
         private int selectedEmpId = -1;
 
-        public EmployeeForm()
+        public EmployeeForm ()
         {
             InitializeComponent();
-            
         }
 
-        
-        private void EmployeeForm_Load(object sender, EventArgs e)
+        private void EmployeeForm_Load (object sender, EventArgs e)
         {
-
-
         }
 
-        public void Clear()
+        public void Clear ()
         {
             txtName.Clear();
             txtAge.Clear();
@@ -32,12 +28,8 @@ namespace EmployeeManagementSystem
             txtName.Focus();
         }
 
-
-
-
-
         // View Button Click
-        private void btnView_Click(object sender, EventArgs e)
+        private void btnView_Click (object sender, EventArgs e)
         {
             ViewDataForm VDF = new ViewDataForm();
             VDF.Show();
@@ -45,10 +37,9 @@ namespace EmployeeManagementSystem
         }
 
         // Save Button Click
-        private void btnSave_Click(object sender, EventArgs e)
+        private void btnSave_Click (object sender, EventArgs e)
         {
-
-            if (txtName.Text == "" || txtAge.Text == "" || txtSalary.Text == "" || txtDepartment.Text == "" || txtRegistrationNo.Text=="")
+            if (txtName.Text == "" || txtAge.Text == "" || txtSalary.Text == "" || txtDepartment.Text == "" || txtRegistrationNo.Text == "")
             {
                 MessageBox.Show("All fields are required");
                 return;
@@ -73,48 +64,45 @@ namespace EmployeeManagementSystem
                 MessageBox.Show("Employee saved successfully ✅");
 
                 Clear();
-
-
-
-
-
             }
             catch (FormatException)
             {
-                
                 MessageBox.Show("Age and Salary must contain numbers only");
             }
             catch (Exception ex)
             {
-               
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+
         // Back Button Click
-        private void btnBack_Click(object sender, EventArgs e)
+        private void btnBack_Click (object sender, EventArgs e)
         {
             Dashboard dashboard = new Dashboard();
             dashboard.Show();
             this.Hide();
         }
 
-
         public int SelectedEmpId { get; set; }
+
         public string EmployeeName
         {
             get { return txtName.Text; }
             set { txtName.Text = value; }
         }
+
         public string EmployeeAge
         {
             get { return txtAge.Text; }
             set { txtAge.Text = value; }
         }
+
         public string EmployeeDepartment
         {
             get { return txtDepartment.Text; }
             set { txtDepartment.Text = value; }
         }
+
         public string EmployeeSalary
         {
             get { return txtSalary.Text; }
@@ -127,8 +115,7 @@ namespace EmployeeManagementSystem
             set { txtRegistrationNo.Text = value; }
         }
 
-
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void btnUpdate_Click (object sender, EventArgs e)
         {
             if (SelectedEmpId == 0)
             {
@@ -161,10 +148,5 @@ namespace EmployeeManagementSystem
             }
             Clear();
         }
-
-
-
     }
 }
-
-
